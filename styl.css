@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 18px;
+}
+
+:root{
+  --radius:0.85rem;
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-main-bg: hsl(217, 54%, 11%);
+  --clr-card-bg: hsl(216, 50%, 16%);
+  --clr-line-blue: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+body{
+  background-color: var(--clr-main-bg);
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  background-color: var(--clr-card-bg);
+  width: 18.5rem;
+  height: auto;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 12px 12px 18px rgb(21, 21, 21);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.card-img{
+  border-radius: var(--radius);
+  position: relative;
+}
+.card-img-container{
+  width: 297px;
+  position: relative;
+}
+.overlay {
+  width: 297px;
+  height: 297px;
+  background-color: var(--clr-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.card-img-container:hover .overlay{
+  opacity: 0.5;
+}
+.title{
+  color: var(--clr-white);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.title:hover{
+  color: var(--clr-cyan);
+  cursor:zoom-out;
+}
+.card-description{
+  color: var(--clr-soft-blue);
+  text-align: left;
+  opacity: 0.5;
+  font-size: 1rem;
+}
+.card-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.lef-container-img,.right-container-img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+.left-text{
+  color: var(--clr-cyan);
+  font-weight:600;
+}
+.right-text{
+  color: var(--clr-soft-blue);
+}
+.card-divider{
+  border: 1.3px solid var(--clr-line-blue);
+}
+.avatar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+.avatar-img-container{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 1rem;
+}
+.avatar-img{
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--clr-white)
+  
+}
+.paragraph{
+  color: var(--clr-soft-blue);
+}
+.color-white{
+  color: var(--clr-white);
+}
+
+.color-white:hover{
+  color: var(--clr-cyan);
+  cursor: pointer;
+}
